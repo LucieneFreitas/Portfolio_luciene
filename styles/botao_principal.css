@@ -1,0 +1,27 @@
+/* -----------------------------------------------------------
+   9. BOTÕES
+   ----------------------------------------------------------- */
+.prt_btn {
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    color: var(--btn-text);
+    font: var(--btn-font);
+    border-radius: var(--btn-radius);
+    padding: 0 20px;
+    min-width: 140px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    transition: var(--transition-fast);
+}
+
+.prt_btn:hover,
+.prt_btn:focus {
+    color: var(--accent);
+    background-color: var(--surface-page);
+    border-color: var(--accent);
+}

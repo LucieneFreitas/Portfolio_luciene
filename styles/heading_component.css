@@ -1,0 +1,55 @@
+/* -----------------------------------------------------------
+   8. HEADING COMPONENT
+   ----------------------------------------------------------- */
+.prt_heading_wrapper {
+    text-align: center;
+}
+
+.prt_heading {
+    margin-bottom: 50px;
+    display: inline-block;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.prt_heading h1 {
+    font: var(--h-section-title);
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    width: auto;
+    padding-bottom: 15px;
+}
+
+.prt_heading h1::after {
+    content: "";
+    position: absolute;
+    background-color: var(--text-heading);
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+}
+
+.prt_heading p {
+    text-align: right;
+    width: auto;
+    text-transform: uppercase;
+    background-color: var(--surface-page);
+    margin: 0;
+    padding-left: 10px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    color: var(--text-accent);
+    font-weight: 500;
+    font: var(--text-sm);
+}
+
+.prt_heading_wrapper_2 {
+    text-align: left;
+}
+
+.prt_heading_wrapper_2 .prt_heading {
+    margin-bottom: 30px;
+}

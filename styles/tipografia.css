@@ -1,0 +1,37 @@
+/* -----------------------------------------------------------
+  TIPOGRAFIA BASE
+   ----------------------------------------------------------- */
+a {
+    color: var(--text-body);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+    color: var(--text-body);
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--text-heading);
+}

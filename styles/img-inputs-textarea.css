@@ -1,0 +1,26 @@
+/* -----------------------------------------------------------
+   IMAGENS
+   ----------------------------------------------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* -----------------------------------------------------------
+ CAMPOS DE FORMULÁRIO
+   ----------------------------------------------------------- */
+input,
+textarea,
+select,
+button {
+    outline: none;
+    box-shadow: none;
+    font-family: var(--font-family-base);
+}
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
