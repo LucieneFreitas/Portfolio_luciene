@@ -33,6 +33,7 @@
     padding: 200px 0;
 }
 
+
 .prt_home_wrapper h1 {
     position: absolute;
     top: 50%;
@@ -53,7 +54,7 @@
     left: 50px;
     top: 50px;
     z-index: 2;
-    width: 80px;
+    width: 60px;
   -webkit-animation: rotate 2s linear infinite;
   -moz-animation: rotate 2s linear infinite;
   -o-animation: rotate 2s linear infinite;
@@ -74,4 +75,60 @@
   100% {
     transform: rotatey(360deg);
   }
+}
+
+
+/* -----------------------------------------------------------
+   4. Navegação principal
+   ----------------------------------------------------------- */
+
+.prt_menu_wrapper a {
+    position: absolute;
+    text-transform: uppercase;
+    color: rgb(32, 32, 32);
+    font-size: 18px;
+    z-index: 1;
+    font-weight: 500;
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+
+a {
+    color: rgb(113, 113, 113);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.prt_menu_wrapper {
+    text-align: center;
+}
+
+/* SOBRE MIM - Centralizado no topo */
+.prt_menu_wrapper a.prt_top {
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* CONTATO - Centralizado na direita (verticalmente) */
+.prt_menu_wrapper a.prt_right {
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%) rotateZ(90deg);
+    transform-origin: center;
+}
+
+/* HABILIDADES - Centralizado no bottom */
+.prt_menu_wrapper a.prt_bottom {
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* PORTFÓLIO - Centralizado na esquerda (verticalmente) */
+.prt_menu_wrapper a.prt_left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotateZ(-90deg);
+    transform-origin: center;
 }
