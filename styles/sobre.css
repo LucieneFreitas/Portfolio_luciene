@@ -1,0 +1,553 @@
+/* ===================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+=================================== */
+
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================================
+   CABEÇALHO / LOGO
+=================================== */
+.prt_home_wrapper {
+  background-color: var(--background_header);
+  padding: 20px 0;
+  box-shadow: var(----box-shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.prt_logo_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.prt_logo_wrapper a {
+  display: inline-block;
+}
+
+.prt_logo_wrapper img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* ===================================
+   SEÇÃO SOBRE - WRAPPER PRINCIPAL
+=================================== */
+.prt_about_wrapper {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+/* Botão Voltar */
+.prt_close_wrapper {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  z-index: 100;
+}
+
+.prt_close_wrapper a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background_header);
+  border-radius: 50%;
+  box-shadow: var(----box-shadow);
+  transition: all 0.3s ease;
+}
+
+.prt_close_wrapper a:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.1);
+}
+
+.prt_close_wrapper img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===================================
+   BLOCO "SOBRE MIM" - LAYOUT PRINCIPAL
+=================================== */
+/* BLOCO "SOBRE MIM" - LAYOUT PRINCIPAL */
+.prt_about_info {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  margin-bottom: 80px;
+  min-height: auto;
+}
+
+/* Linha principal do bloco Sobre mim */
+.prt_about_info .row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  /* antes: align-items: center;  -> deixava a imagem “caindo” pra baixo */
+  align-items: flex-start;   /* alinha topo das duas colunas */
+}
+
+/* Coluna da Imagem */
+.prt_about_info .col-lg-6:first-child {
+  padding: 60px 50px;        /* mesmo top padding do card de texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background_header);       /* card branco igual ao texto */
+  border-radius: 16px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+  flex: 0 0 45%;
+  max-width: 45%;
+  margin-top: 0;             /* REMOVE o -40px que estava aqui */
+}
+
+/* Foto “solta” dentro do card */
+.prt_about_img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prt_about_img img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 22px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  box-shadow: var(--box-shadow);
+}
+
+.prt_about_info .col-lg-6:first-child {
+  padding: 0;           
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;   /* remove o card */
+  border-radius: 0;
+  box-shadow: none;          /* remove sombra externa */
+  flex: 0 0 45%;
+  max-width: 45%;
+  margin-top: 0;             /* mantém alinhado ao texto */
+}
+
+
+/* ===================================
+   CABEÇALHO DA SEÇÃO "SOBRE MIM"
+=================================== */
+.prt_heading_wrapper_2 {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.prt_heading h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+}
+
+.prt_heading h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #ff5e57;
+}
+
+.prt_heading p {
+  font-size: 16px;
+  color: #ff5e57;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+/* ===================================
+   CONTEÚDO TEXTO "SOBRE MIM"
+=================================== */
+.prt_about_details p {
+  font-size: 15px;
+  line-height: 1.8;
+  
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.prt_about_details p:last-of-type {
+  margin-bottom: 30px;
+}
+
+/* ===================================
+   BOTÕES
+=================================== */
+.prt_btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background-color: var(--btn-hover);
+  color: var(--text-inverse);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 15px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: var(--btn-shadow);
+}
+
+.prt_btn:hover {
+  background-color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--btn-shadow);
+}
+
+/* Botões abaixo da imagem */
+.prt_about_actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Reaproveita .prt_btn que você já tem */
+.prt_about_actions .prt_btn {
+  margin-top: 0;   /* já tem margin no container */
+}
+
+
+
+
+/* ===================================
+   SEÇÃO EXPERIÊNCIA
+=================================== */
+/* ===================================
+   SEÇÃO EXPERIÊNCIA
+=================================== */
+.prt_about_experience_wrapper {
+  /* antes só tinha margin-bottom */
+  margin-bottom: 80px;
+  
+  /* >>> mesmo “card” do bloco de texto do Sobre <<< */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+  padding: 60px 50px 60px 50px;  /* mesmo padrão de espaçamento */
+}
+
+/* mantém o layout dos cards, só ajusta o margin do row
+   pra respeitar o padding interno do card */
+.prt_about_experience .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;  /* se quiser tudo ainda mais alinhado, pode usar margin: 0; */
+}
+
+.prt_about_experiencebox {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+
+/* ===================================
+   SEÇÃO PERFIS / REDES
+=================================== */
+/* ===================================
+   EXPERIÊNCIA — AJUSTE DE LAYOUT
+=================================== */
+
+.prt_about_experience_wrapper {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+  padding: 60px 50px 60px 50px;
+  margin-bottom: 80px;
+}
+
+/* Linha de cards */
+.prt_about_experience .row {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* >>> controla o espaço horizontal entre os cards <<< */
+  column-gap: 40px; /* antes estava colado, agora fica elegante */
+  row-gap: 40px;
+
+  margin: 0;  /* remove margens que empurravam a grid */
+}
+
+/* Cada coluna dos cards */
+.prt_about_experience .col-lg-6 {
+  flex: 0 0 calc(50% - 40px);  /* 50% menos o gap para centralizar perfeito */
+  max-width: calc(50% - 40px);
+}
+
+/* Card individual */
+.prt_about_experiencebox {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.prt_about_experiencebox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+  border-left-color: #ff5e57;
+}
+
+
+/* ===================================
+   RODAPÉ
+=================================== */
+.prt_footer_wrapper {
+  background-color: #2c3e50;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.prt_footer_wrapper p {
+  color: var(--footer);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.prt_footer_wrapper a {
+  color: var(--btn-hover);
+  text-decoration: none;
+}
+
+.prt_footer_wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.prt_footer_wrapper ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--box-shadow);
+  border-radius: 50%;
+  color: var(--background_header);
+  transition: all 0.3s ease;
+}
+
+.prt_footer_wrapper ul li a:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-3px);
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+@media (max-width: 1199px) {
+  .prt_about_info .col-lg-6:last-child {
+    padding: 40px 35px;
+  }
+  
+  .prt_heading h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 991px) {
+  .prt_close_wrapper {
+    top: 100px;
+    right: 20px;
+  }
+  
+  .prt_about_info .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .prt_about_info .col-lg-6:first-child,
+  .prt_about_info .col-lg-6:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  
+  .prt_about_img img {
+    max-width: 60%;
+  }
+
+  .prt_about_actions {
+    margin-bottom: 30px;
+  }
+  
+  .prt_about_info .col-lg-6:last-child {
+    padding: 40px 30px;
+    max-height: none;
+  }
+  
+  /* Timeline fica à esquerda em mobile */
+  .prt_about_learnsection .row::before {
+    left: 30px;
+  }
+  
+  .prt_about_learnbox_right,
+  .prt_about_learnbox_left {
+    margin-left: 60px;
+    margin-right: 0;
+  }
+  
+  .prt_about_learnbox_right::before,
+  .prt_about_learnbox_left::before {
+    left: -60px;
+    right: auto;
+  }
+  
+  .prt_profile_info {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .prt_heading h1 {
+    font-size: 32px;
+  }
+  
+  .prt_about_details p {
+    text-align: left;
+  }
+  
+  .prt_btn {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .prt_footer_wrapper ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 575px) {
+  .prt_about_wrapper {
+    padding-top: 80px;
+  }
+  
+  .prt_close_wrapper {
+    top: 90px;
+    right: 15px;
+  }
+  
+  .prt_heading h1 {
+    font-size: 28px;
+  }
+  
+  .prt_about_info .col-lg-6:last-child {
+    padding: 30px 20px;
+  }
+  
+  .prt_profile_info {
+    padding: 30px 20px;
+  }
+}
+
+/* ===================================
+   SEÇÃO EXPERIÊNCIA (RESPONSIVA)
+=================================== */
+
+.prt_about_experience_wrapper {
+  background-color: var(--background_header);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  padding: 60px 50px;
+  margin-bottom: 80px;
+}
+
+/* Linha de cards */
+.prt_about_experience .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;        /* espaçamento entre os cards */
+  margin: 0;
+}
+
+/* Coluna padrão (MOBILE FIRST: 1 por linha) */
+.prt_about_experience .col-lg-6 {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Card individual */
+.prt_about_experiencebox {
+  background-color: var(--background_header);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.prt_about_experiencebox:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+  border-left-color: var(--line-experience);
+}
+
+/* ===========================
+   BREAKPOINTS
+=========================== */
+
+/* Desktop: 2 cards por linha */
+@media (min-width: 992px) {
+  .prt_about_experience .col-lg-6 {
+    flex: 0 0 calc(50% - 40px);   /* 2 colunas com gap */
+    max-width: calc(50% - 40px);
+  }
+}
+
+/* Tablets: menos padding lateral */
+@media (max-width: 991px) {
+  .prt_about_experience_wrapper {
+    padding: 40px 30px;
+  }
+}
+
+/* Mobile pequeno: padding ainda menor */
+@media (max-width: 575px) {
+  .prt_about_experience_wrapper {
+    padding: 30px 20px;
+  }
+}
